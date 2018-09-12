@@ -7,18 +7,33 @@
 //
 
 import Foundation
-import SwiftyJSON
 
-struct Product {
-    public private(set) var url: String
-    public private(set) var name: String
-    public private(set) var price: Double
-    public private(set) var currency: String
+///********codable
+struct Response: Codable {
+    let statusCode: Int
+    let message, status: String
+    let data: Product
     
-    init(json:JSON){
-        url = json["url"].stringValue
-        name = json["name"].stringValue
-        price = json["price"].doubleValue
-        currency = json["currency"].stringValue
+    enum CodingKeys: String, CodingKey {
+        case statusCode = "StatusCode"
+        case message = "Message"
+        case status = "Status"
+        case data
     }
 }
+
+struct Product: Codable {
+
+    let url: String
+    let name: String
+    let price: Double
+    let currency: String
+    
+    enum CodingKeys: String, CodingKey {
+        case url = "url"
+        case name = "name"
+        case price = "price"
+        case currency = "currency"
+    }
+}
+

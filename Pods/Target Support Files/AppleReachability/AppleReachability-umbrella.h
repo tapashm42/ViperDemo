@@ -10,7 +10,8 @@
 #endif
 #endif
 
+#import "Reachability.h"
 
-FOUNDATION_EXPORT double SwiftyJSONVersionNumber;
-FOUNDATION_EXPORT const unsigned char SwiftyJSONVersionString[];
+FOUNDATION_EXPORT double AppleReachabilityVersionNumber;
+FOUNDATION_EXPORT const unsigned char AppleReachabilityVersionString[];
 

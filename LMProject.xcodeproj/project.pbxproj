@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03311F2D2149958200F6CAE5 /* LMError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03311F2A2149958200F6CAE5 /* LMError.swift */; };
+		03311F2E2149958200F6CAE5 /* LMNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03311F2B2149958200F6CAE5 /* LMNetworkManager.swift */; };
+		03311F2F2149958200F6CAE5 /* LMNetworkRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03311F2C2149958200F6CAE5 /* LMNetworkRequestModel.swift */; };
 		033D27FE20E6AF9F00924420 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033D27FD20E6AF9F00924420 /* AppDelegate.swift */; };
 		033D280520E6AFA000924420 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 033D280420E6AFA000924420 /* Assets.xcassets */; };
 		033D280820E6AFA000924420 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 033D280620E6AFA000924420 /* LaunchScreen.storyboard */; };
@@ -44,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03311F2A2149958200F6CAE5 /* LMError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMError.swift; sourceTree = "<group>"; };
+		03311F2B2149958200F6CAE5 /* LMNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMNetworkManager.swift; sourceTree = "<group>"; };
+		03311F2C2149958200F6CAE5 /* LMNetworkRequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMNetworkRequestModel.swift; sourceTree = "<group>"; };
 		033D27FA20E6AF9F00924420 /* LMProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LMProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		033D27FD20E6AF9F00924420 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		033D280420E6AFA000924420 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -116,6 +122,32 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		03311F272149958200F6CAE5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				03311F282149958200F6CAE5 /* Result */,
+				03311F292149958200F6CAE5 /* Network */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		03311F282149958200F6CAE5 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+		03311F292149958200F6CAE5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				03311F2A2149958200F6CAE5 /* LMError.swift */,
+				03311F2B2149958200F6CAE5 /* LMNetworkManager.swift */,
+				03311F2C2149958200F6CAE5 /* LMNetworkRequestModel.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		033D27F120E6AF9F00924420 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +173,7 @@
 		033D27FC20E6AF9F00924420 /* LMProject */ = {
 			isa = PBXGroup;
 			children = (
+				03311F272149958200F6CAE5 /* Service */,
 				033D284720E6CD0400924420 /* Models */,
 				033D283F20E6CA4200924420 /* Common */,
 				033D283820E6B32200924420 /* ProductDetail */,
@@ -475,14 +508,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LMProject/Pods-LMProject-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AppleReachability/AppleReachability.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppleReachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -501,6 +534,9 @@
 				033D284920E6CD2C00924420 /* Product.swift in Sources */,
 				033D283320E6B0B800924420 /* ProductListRouter.swift in Sources */,
 				033D283620E6B0B800924420 /* ProductListInteractor.swift in Sources */,
+				03311F2D2149958200F6CAE5 /* LMError.swift in Sources */,
+				03311F2E2149958200F6CAE5 /* LMNetworkManager.swift in Sources */,
+				03311F2F2149958200F6CAE5 /* LMNetworkRequestModel.swift in Sources */,
 				033D283420E6B0B800924420 /* ProductListViewController.swift in Sources */,
 				033D283520E6B0B800924420 /* ProductListProtocols.swift in Sources */,
 				033D27FE20E6AF9F00924420 /* AppDelegate.swift in Sources */,
