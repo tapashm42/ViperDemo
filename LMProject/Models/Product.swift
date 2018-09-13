@@ -8,32 +8,22 @@
 
 import Foundation
 
-///********codable
-struct Response: Codable {
+struct Empty: Codable {
     let statusCode: Int
     let message, status: String
-    let data: Product
+    let products: [Product]
     
     enum CodingKeys: String, CodingKey {
         case statusCode = "StatusCode"
         case message = "Message"
         case status = "Status"
-        case data
+        case products
     }
 }
 
 struct Product: Codable {
-
     let url: String
-    let name: String
-    let price: Double
-    let currency: String
-    
-    enum CodingKeys: String, CodingKey {
-        case url = "url"
-        case name = "name"
-        case price = "price"
-        case currency = "currency"
-    }
+    let name, price, currency: String
 }
+
 
